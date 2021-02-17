@@ -11,3 +11,31 @@
     # else
     (+ "/home/" whoami))
 }))
+###
+# @meta os
+# @brief Returns the current username
+# @author https://github.com/LouiviS
+##
+(let os:username (fun ()
+  (sys:exec "echo %USERNAME%")))
+###
+# @meta os
+# @brief Returns the device name
+# @author https://github.com/LouiviS
+##
+(let os:domain (fun ()
+  (sys:exec "echo %USERDOMAIN%")))
+###
+# @meta os
+# @brief Returns the date
+# @author https://github.com/LouiviS
+##
+(let os:date (fun ()
+  (sys:exec "echo %date%")))
+###
+# @meta os
+# @brief Returns the time
+# @author https://github.com/LouiviS
+##
+(let os:time (fun () 
+  (sys:exec "echo %time%")))
